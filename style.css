@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./assets/taneli-lahtinen-bJiisZmEB2M-unsplash.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10rem;
+    align-items: center;
+    background-color: red;
+}
+
+.navbar .nav-image {
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+.navbar .nav-image h5 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar img {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar .nav-list {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-bottom: -10px;
+}
+
+.navbar .nav-list li {
+    list-style-type: none;
+    margin-right: 50px;
+    width: 80px;
+}
+
+.navbar .nav-list a {
+    transition: all 0.5s ease-in-out;
+    color: #ffffffaf;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.navbar .nav-list a:hover {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        justify-content: space-between;
+        padding: 20px 3rem; 
+    }
+    .navbar .nav-image h5 {
+        font-size: 30px;
+    }
+    .navbar img {
+        height: 30px;
+        width: 30px;
+    }
+    .navbar .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none; 
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .navbar .nav-list li {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        width: auto;
+    }
+    .navbar .nav-list a {
+        font-size: 20px;
+        color: white; 
+    }
+    .navbar .nav-list a:hover {
+        font-size: 21px;
+    }
+    
+    .navbar .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}

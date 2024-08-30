@@ -133,10 +133,52 @@ body {
 }
 
 .main-container .right{
-    width: 65%;
-    background-color: rgb(28, 150, 93);
-    height: 100%;
+    width: 65%; 
+    height: fit-content;
+    /* overflow: hidden; */
 }
+.gallery {
+    height: 600px;
+    width: 100%; 
+    display: flex;
+    gap: 40px;
+    align-items: end;
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    white-space: nowrap; /* Ensure items don't wrap */
+}
+
+.gallery .gallery-item {
+    flex: 0 0 350px; 
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ensure items appear in a row */
+}
+
+.gallery .gallery-item.main {
+    border: 5px solid #fff;
+    flex: 0 0 400px; 
+    height: 500px;
+    transition: all 0.3s ease;
+}
+
+.gallery .gallery-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.gallery .gallery-item:active {
+    cursor: grabbing;
+}
+
+
 
 footer{
     align-items: end;

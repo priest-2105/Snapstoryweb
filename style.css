@@ -141,29 +141,32 @@ body {
     height: 600px;
     width: 100%; 
     display: flex;
-    gap: 40px;
-    align-items: end;
-    overflow-x: scroll; 
+    gap: 20px; /* Adjust gap as needed */
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
-    white-space: nowrap; /* Ensure items don't wrap */
+    scroll-snap-type: x mandatory; /* Enable smooth snapping */
 }
 
 .gallery .gallery-item {
-    flex: 0 0 350px; 
-    height: 400px;
+    flex: 0 0 350px; /* Adjust base size */
+    height: 400px; /* Adjust base height */
     overflow: hidden;
     border-radius: 30px;
-    cursor: grab;
-    transition: all 0.3s ease;
-    display: inline-block; /* Ensure items appear in a row */
+    transition: all 0.3s ease; /* Smooth transitions */
+    scroll-snap-align: center; /* Align items to center when scrolling */
 }
 
 .gallery .gallery-item.main {
-    border: 5px solid #fff;
-    flex: 0 0 400px; 
-    height: 500px;
-    transition: all 0.3s ease;
+    flex: 0 0 400px; /* Increase size for main item */
+    height: 500px; /* Increase height for main item */
+    border: 5px solid #fff; /* Main item border */
 }
+
+
+
+
+
 
 .gallery .gallery-item img {
     width: 100%; 
@@ -177,7 +180,6 @@ body {
 .gallery .gallery-item:active {
     cursor: grabbing;
 }
-
 
 
 footer{

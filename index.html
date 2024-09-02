@@ -9,7 +9,14 @@
     <script src="https://kit.fontawesome.com/0fcc8b9f34.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.theme.min.css">
-
+    <style>
+        .body {
+            transition: background-image 0.5s ease-in-out;
+        }
+        #exploreButton {
+            transition: background-color 0.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <div class="body">
@@ -31,48 +38,66 @@
         </header>
         <div class="main-container">
             <div class="left">
-                <h1>LandScapes</h1>
-                <p>Landscaping is the process of changing the visual features of land. It is a great way to improve the appearance of a property. It can also be used to increase its value. A landscaper can use different techniques to create beautiful, functional landscapes. It is important to understand the basics of landscaping to create a successful design.</p>
-                <button>Explore now</button>
+                <h1 id="headerText">LandScapes</h1>
+                <p id="descriptionText">Landscaping is the process of changing the visual features of land. It is a great way to improve the appearance of a property. It can also be used to increase its value. A landscaper can use different techniques to create beautiful, functional landscapes. It is important to understand the basics of landscaping to create a successful design.</p>
+                <button id="exploreButton">Explore now</button>
             </div>
             <div class="right">
-          
-                  
-                
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide" data-bg="url('./assets/portraiton.jpeg')" data-button-color="#385F55" data-header="Portraits" 
+                        data-description="A portrait is a painting, photograph, sculpture, or other artistic representation of a person, in which the face is always predominant. In arts, a portrait can be represented as half body and even full body. If the subject in full body better represents personality and mood - this type of presentation can be chosen.">
+                        <img src="./assets/Rectangle 5.png" alt=""></li>
+                       
+                        <li class="glide__slide" data-bg="url('./assets/Carsback.png')" data-button-color="#5F1B1C" data-header="Cars" 
+                        data-description="Cars are fascinating, aren’t they? Whether you’re interested in the latest models, 
+                        looking to buy a new or used car, or just curious about different types of vehicles, there’s a lot to explore.
+                        Are you looking for something specific, like a particular model or type of car? ">
+                        <img src="./assets/Rectangle 6.png" alt=""></li>
+                       
+                        <li class="glide__slide" data-bg="url('./assets/Sports.png')" data-button-color="#0382E8" data-header="Sports"
+                        data-description="Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some cases, entertainment to spectators.[2] Many sports exist, with different participant numbers, some are done by a single person with others being done by hundreds.">
+                        <img src="./assets/Rectangle 7.png" alt=""></li>
+                       
+                        <li class="glide__slide" data-bg="url('./assets/taneli-lahtinen-bJiisZmEB2M-unsplash.jpg')" data-button-color="#50B61B" data-header="LandScapes" 
+                        data-description="Landscaping is the process of changing the visual features of land. It is a great way to improve the appearance of a property. It can also be used to increase its value. A landscaper can use different techniques to create beautiful, functional landscapes. It is important to understand the basics of landscaping to create a successful design.">
+                        <img src="./assets/Rectangle 8.png" alt=""></li>
+                      </ul>
+                    </div>
+                  </div>
             </div>
-            
         </div>
         <footer>
             <p>UIBYDAMI</p>
         </footer>
-        
-        
-        
-                <div class="glide">
-                    <div class="glide__track" data-glide-el="track">
-                      <ul class="glide__slides">
-                        <li class="glide__slide">Slide 1</li>
-                        <li class="glide__slide">Slide 2</li>
-                        <li class="glide__slide">Slide 3</li>
-                      </ul>
-                    </div>
-                  </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
 <script src="./super.js"></script>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       const glide = new Glide('.glide', {
         type: 'carousel',
         startAt: 0,
-        perView: 3
+        perView: 3,
+        focusAt: 'center'
       });
-  
-      glide.mount();
-    });
-  </script>
-  
 
+      glide.mount();
+
+      glide.on('run', function () {
+        const currentSlide = document.querySelector('.glide__slide.glide__slide--active');
+        const backgroundImage = currentSlide.getAttribute('data-bg');
+        const buttonColor = currentSlide.getAttribute('data-button-color');
+        const headerText = currentSlide.getAttribute('data-header');
+        const descriptionText = currentSlide.getAttribute('data-description');
+
+        document.querySelector('.body').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.904)), ${backgroundImage}`;
+        document.getElementById('exploreButton').style.backgroundColor = buttonColor;
+        document.getElementById('headerText').innerText = headerText;
+        document.getElementById('descriptionText').innerText = descriptionText;
+      });
+    });
+</script>
 </body>
 </html>

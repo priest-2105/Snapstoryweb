@@ -6,6 +6,10 @@
     <title>SnapStory</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./assets/snapstoryicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0fcc8b9f34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.theme.min.css">
+
 </head>
 <body>
     <div class="body">
@@ -32,49 +36,43 @@
                 <button>Explore now</button>
             </div>
             <div class="right">
-                <!-- <div class="gallery" id="galleryItemContainer">
-                    <div class="gallery-item main">
-                        <img src="./assets/forest.png" alt="Gallery-image">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./assets/Rectangle 5.png" alt="Gallery-image">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./assets/Rectangle 6.png" alt="Gallery-image">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./assets/Rectangle 7.png" alt="Gallery-image">
-                    </div>
-                </div> -->
-
-                <div class="slider-container">
-                    <div class="inner-slider">
-                        <div class="card">
-                            <img src="./assets/forest.png" alt="Gallery-image">
-                        </div>
-
-                        <div class="card">
-                            <img src="./assets/Rectangle 5.png" alt="Gallery-image">
-                        </div>
-
-                        <div class="card">
-                            <img src="./assets/Rectangle 6.png" alt="Gallery-image">
-                        </div>
-
-                        <div class="card">
-                            <img src="./assets/Rectangle 7.png" alt="Gallery-image">
-                        </div>
-
-                    </div>
-                </div>
-            
+          
+                  
+                
             </div>
+            
         </div>
         <footer>
             <p>UIBYDAMI</p>
         </footer>
+        
+        
+        
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide">Slide 1</li>
+                        <li class="glide__slide">Slide 2</li>
+                        <li class="glide__slide">Slide 3</li>
+                      </ul>
+                    </div>
+                  </div>
     </div>
-    <script src="https://kit.fontawesome.com/0fcc8b9f34.js" crossorigin="anonymous"></script>
-    <script src="./super.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
+<script src="./super.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const glide = new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3
+      });
+  
+      glide.mount();
+    });
+  </script>
+  
+
 </body>
 </html>

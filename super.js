@@ -17,34 +17,34 @@ hamburgerToggle_div.addEventListener('click', () => {
     
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const glide = new Glide('.glide', {
-      type: 'carousel',
-      startAt: 0,
-      perView: 3
-    }).mount();
+// document.addEventListener('DOMContentLoaded', function () {
+//     const glide = new Glide('.glide', {
+//       type: 'carousel',
+//       startAt: 0,
+//       perView: 3
+//     }).mount();
   
-    const slides = document.querySelectorAll('.glide__slide');
-    const updateFocus = () => {
-      slides.forEach(slide => {
-        const rect = slide.getBoundingClientRect();
-        const centerX = window.innerWidth / 2;
-        const slideCenterX = rect.left + rect.width / 2;
-        const distance = Math.abs(centerX - slideCenterX);
+//     const slides = document.querySelectorAll('.glide__slide');
+//     const updateFocus = () => {
+//       slides.forEach(slide => {
+//         const rect = slide.getBoundingClientRect();
+//         const centerX = window.innerWidth / 2;
+//         const slideCenterX = rect.left + rect.width / 2;
+//         const distance = Math.abs(centerX - slideCenterX);
   
-        // Adjust threshold and scale as necessary
-        if (distance < 200) {
-          slide.classList.add('focused');
-        } else {
-          slide.classList.remove('focused');
-        }
-      });
-    };
+//         // Adjust threshold and scale as necessary
+//         if (distance < 200) {
+//           slide.classList.add('focused');
+//         } else {
+//           slide.classList.remove('focused');
+//         }
+//       });
+//     };
   
-    // Update focus on load and during sliding
-    updateFocus();
-    glide.on('move', updateFocus);
-  });
+//     // Update focus on load and during sliding
+//     updateFocus();
+//     glide.on('move', updateFocus);
+//   });
   
 
 

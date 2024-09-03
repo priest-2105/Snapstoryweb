@@ -75,29 +75,38 @@
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
 <script src="./super.js"></script>
 <script>
+    
     document.addEventListener('DOMContentLoaded', function () {
-      const glide = new Glide('.glide', {
+    const glide = new Glide('.glide', {
         type: 'carousel',
         startAt: 0,
         perView: 3,
         focusAt: 'center'
-      });
-
-      glide.mount();
-
-      glide.on('run', function () {
-        const currentSlide = document.querySelector('.glide__slide.glide__slide--active');
-        const backgroundImage = currentSlide.getAttribute('data-bg');
-        const buttonColor = currentSlide.getAttribute('data-button-color');
-        const headerText = currentSlide.getAttribute('data-header');
-        const descriptionText = currentSlide.getAttribute('data-description');
-
-        document.querySelector('.body').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.904)), ${backgroundImage}`;
-        document.getElementById('exploreButton').style.backgroundColor = buttonColor;
-        document.getElementById('headerText').innerText = headerText;
-        document.getElementById('descriptionText').innerText = descriptionText;
-      });
     });
+
+    glide.mount();
+
+    glide.on('move', function () {
+        const slides = document.querySelectorAll('.glide__slide');
+        slides.forEach(slide => {
+            slide.classList.remove('glide__slide--active');
+        });
+
+        const currentSlide = document.querySelector('.glide__slide[aria-current="true"]');
+        if (currentSlide) {
+            currentSlide.classList.add('glide__slide--active');
+        }
+    });
+
+    // Initial activation of the first slide
+    const initialSlide = document.querySelector('.glide__slide[aria-current="true"]');
+    if (initialSlide) {
+        initialSlide.classList.add('glide__slide--active');
+    }
+});
+
+
+
 </script>
 </body>
 </html>

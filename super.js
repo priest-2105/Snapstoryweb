@@ -17,35 +17,52 @@ hamburgerToggle_div.addEventListener('click', () => {
     
 });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const glide = new Glide('.glide', {
-//       type: 'carousel',
-//       startAt: 0,
-//       perView: 3
-//     }).mount();
-  
-//     const slides = document.querySelectorAll('.glide__slide');
-//     const updateFocus = () => {
-//       slides.forEach(slide => {
-//         const rect = slide.getBoundingClientRect();
-//         const centerX = window.innerWidth / 2;
-//         const slideCenterX = rect.left + rect.width / 2;
-//         const distance = Math.abs(centerX - slideCenterX);
-  
-//         // Adjust threshold and scale as necessary
-//         if (distance < 200) {
-//           slide.classList.add('focused');
-//         } else {
-//           slide.classList.remove('focused');
-//         }
-//       });
-//     };
-  
-//     // Update focus on load and during sliding
-//     updateFocus();
-//     glide.on('move', updateFocus);
-//   });
-  
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 2.3,
+        focusAt: '0',
+        gap: 20,
+        peek: {
+            before: 40,
+            after: 0
+          }
+    });
+
+    glide.mount();
+
+    // Function to update the background, button color, header, and description
+    function updateSlideContent() {
+        const currentSlide = document.querySelector('.glide__slide--active');
+
+        if (currentSlide) {
+            const backgroundImage = currentSlide.getAttribute('data-bg');
+            const buttonColor = currentSlide.getAttribute('data-button-color');
+            const headerText = currentSlide.getAttribute('data-header');
+            const descriptionText = currentSlide.getAttribute('data-description');
+
+            document.querySelector('.body').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.904)), ${backgroundImage}`;
+            document.getElementById('exploreButton').style.backgroundColor = buttonColor;
+            document.getElementById('headerText').innerText = headerText;
+            document.getElementById('descriptionText').innerText = descriptionText;
+        }
+    }
+
+    // Update content when the glide index changes
+    glide.on('run.after', function () {
+        updateSlideContent();
+    });
+
+    // Initial activation of the first slide
+    updateSlideContent();
+});
+
+
 
 
 // var carousel = (function () {

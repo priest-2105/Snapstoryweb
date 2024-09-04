@@ -48,21 +48,21 @@
                       <ul class="glide__slides">
                         <li class="glide__slide" data-bg="url('./assets/portraiton.jpeg')" data-button-color="#385F55" data-header="Portraits" 
                         data-description="A portrait is a painting, photograph, sculpture, or other artistic representation of a person, in which the face is always predominant. In arts, a portrait can be represented as half body and even full body. If the subject in full body better represents personality and mood - this type of presentation can be chosen.">
-                        <img src="./assets/Rectangle 5.png" alt=""></li>
+                        <div style="background-image: url('./assets/portraiton.jpeg');"></div></li>
                        
                         <li class="glide__slide" data-bg="url('./assets/Carsback.png')" data-button-color="#5F1B1C" data-header="Cars" 
                         data-description="Cars are fascinating, aren’t they? Whether you’re interested in the latest models, 
                         looking to buy a new or used car, or just curious about different types of vehicles, there’s a lot to explore.
                         Are you looking for something specific, like a particular model or type of car? ">
-                        <img src="./assets/Rectangle 6.png" alt=""></li>
+                        <div  style="background-image: url('./assets/Carsback.png')"></div></li>
                        
                         <li class="glide__slide" data-bg="url('./assets/Sports.png')" data-button-color="#0382E8" data-header="Sports"
                         data-description="Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some cases, entertainment to spectators.[2] Many sports exist, with different participant numbers, some are done by a single person with others being done by hundreds.">
-                        <img src="./assets/Rectangle 7.png" alt=""></li>
+                        <div  style="background-image: url('./assets/Sports.png');"></div></li>
                        
                         <li class="glide__slide" data-bg="url('./assets/taneli-lahtinen-bJiisZmEB2M-unsplash.jpg')" data-button-color="#50B61B" data-header="LandScapes" 
                         data-description="Landscaping is the process of changing the visual features of land. It is a great way to improve the appearance of a property. It can also be used to increase its value. A landscaper can use different techniques to create beautiful, functional landscapes. It is important to understand the basics of landscaping to create a successful design.">
-                        <img src="./assets/Rectangle 8.png" alt=""></li>
+                        <div  style="background-image: url('./assets/taneli-lahtinen-bJiisZmEB2M-unsplash.jpg');"></div></li>
                       </ul>
                     </div>
                   </div>
@@ -74,39 +74,6 @@
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
 <script src="./super.js"></script>
-<script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-    const glide = new Glide('.glide', {
-        type: 'carousel',
-        startAt: 0,
-        perView: 3,
-        focusAt: 'center'
-    });
 
-    glide.mount();
-
-    glide.on('move', function () {
-        const slides = document.querySelectorAll('.glide__slide');
-        slides.forEach(slide => {
-            slide.classList.remove('glide__slide--active');
-        });
-
-        const currentSlide = document.querySelector('.glide__slide[aria-current="true"]');
-        if (currentSlide) {
-            currentSlide.classList.add('glide__slide--active');
-        }
-    });
-
-    // Initial activation of the first slide
-    const initialSlide = document.querySelector('.glide__slide[aria-current="true"]');
-    if (initialSlide) {
-        initialSlide.classList.add('glide__slide--active');
-    }
-});
-
-
-
-</script>
 </body>
 </html>

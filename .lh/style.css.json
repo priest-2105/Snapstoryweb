@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1728867891919,
@@ -20,6 +20,10 @@
                 {
                     "date": 1728868011743,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -303,6 +303,6 @@\n }\r\n \r\n .glide__slide:not(.glide__slide--active) {\r\n     transform: scale(0.9); /* Scale down non-active slides */\r\n-    opacity: 0.8; /* Optional: slightly reduce opacity */\r\n+    opacity: 0.8; \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728868724405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -290,9 +290,9 @@\n     border-radius: 20px;\r\n }\r\n \r\n \r\n-.glide__slide--active {\r\n+.glide__slide--active \r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; \r\n"
                 }
             ],
             "date": 1728867891919,

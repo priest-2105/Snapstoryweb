@@ -292,8 +292,8 @@ footer p{
 
 
 .glide__slide--active {
-    transform: scale(1.1); /* Scale the active slide */
-    border: 5px solid #ffffff; /* Add a white border to the active slide */
+    transform: scale(1.1);
+    border: 5px solid #ffffff; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
     z-index: 1; /* Bring the active slide to the front */
 }

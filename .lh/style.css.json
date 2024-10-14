@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1728867891919,
@@ -24,6 +24,10 @@
                 {
                     "date": 1728868724405,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -290,9 +290,9 @@\n     border-radius: 20px;\r\n }\r\n \r\n \r\n-.glide__slide--active {\r\n+.glide__slide--active \r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; \r\n"
+                },
+                {
+                    "date": 1728868812071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -278,10 +278,8 @@\n     opacity: 1;\r\n }\r\n \r\n \r\n-\r\n-\r\n .glide__slide div{\r\n     width: 100%;\r\n     height:100%;\r\n     background-size: cover;\r\n@@ -290,9 +288,9 @@\n     border-radius: 20px;\r\n }\r\n \r\n \r\n-.glide__slide--active \r\n+.glide__slide--active  {\r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; \r\n"
                 }
             ],
             "date": 1728867891919,

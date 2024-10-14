@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1728867891919,
@@ -12,6 +12,14 @@
                 {
                     "date": 1728867984691,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -292,9 +292,9 @@\n \r\n \r\n .glide__slide--active {\r\n     transform: scale(1.1);\r\n-    border: 5px solid #ffffff; /* Add a white border to the active slide */\r\n+    border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; /* Bring the active slide to the front */\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728868002618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -294,16 +294,15 @@\n .glide__slide--active {\r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n-    z-index: 1; /* Bring the active slide to the front */\r\n+    z-index: 1; \r\n }\r\n \r\n .glide__slide {\r\n     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for scaling and border */\r\n }\r\n \r\n-/* Optional: Decrease size for non-active slides for more visual contrast */\r\n .glide__slide:not(.glide__slide--active) {\r\n     transform: scale(0.9); /* Scale down non-active slides */\r\n     opacity: 0.8; /* Optional: slightly reduce opacity */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728868011743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -303,6 +303,6 @@\n }\r\n \r\n .glide__slide:not(.glide__slide--active) {\r\n     transform: scale(0.9); /* Scale down non-active slides */\r\n-    opacity: 0.8; /* Optional: slightly reduce opacity */\r\n+    opacity: 0.8; \r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1728867891919,

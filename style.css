@@ -302,8 +302,7 @@ footer p{
     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for scaling and border */
 }
 
-/* Optional: Decrease size for non-active slides for more visual contrast */
 .glide__slide:not(.glide__slide--active) {
     transform: scale(0.9); /* Scale down non-active slides */
-    opacity: 0.8; /* Optional: slightly reduce opacity */
+    opacity: 0.8; 
 }

@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1728867891919,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728867984691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -292,9 +292,9 @@\n \r\n \r\n .glide__slide--active {\r\n     transform: scale(1.1);\r\n-    border: 5px solid #ffffff; /* Add a white border to the active slide */\r\n+    border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; /* Bring the active slide to the front */\r\n }\r\n \r\n"
                 }
             ],
             "date": 1728867891919,

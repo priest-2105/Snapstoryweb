@@ -295,7 +295,7 @@ footer p{
     transform: scale(1.1);
     border: 5px solid #ffffff; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
-    z-index: 1; /* Bring the active slide to the front */
+    z-index: 1; 
 }
 
 .glide__slide {

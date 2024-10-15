@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 37,
             "patches": [
                 {
                     "date": 1728867891919,
@@ -28,6 +28,134 @@
                 {
                     "date": 1728868812071,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -278,10 +278,8 @@\n     opacity: 1;\r\n }\r\n \r\n \r\n-\r\n-\r\n .glide__slide div{\r\n     width: 100%;\r\n     height:100%;\r\n     background-size: cover;\r\n@@ -290,9 +288,9 @@\n     border-radius: 20px;\r\n }\r\n \r\n \r\n-.glide__slide--active \r\n+.glide__slide--active  {\r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n     z-index: 1; \r\n"
+                },
+                {
+                    "date": 1728958275704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -277,9 +277,8 @@\n     /* transform: translateY(0); */\r\n     opacity: 1;\r\n }\r\n \r\n-\r\n .glide__slide div{\r\n     width: 100%;\r\n     height:100%;\r\n     background-size: cover;\r\n@@ -291,9 +290,9 @@\n \r\n .glide__slide--active  {\r\n     transform: scale(1.1);\r\n     border: 5px solid #ffffff; \r\n-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */\r\n+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n \r\n .glide__slide {\r\n"
+                },
+                {
+                    "date": 1728958281018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -295,11 +295,11 @@\n     z-index: 1; \r\n }\r\n \r\n .glide__slide {\r\n-    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for scaling and border */\r\n+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; \r\n }\r\n \r\n .glide__slide:not(.glide__slide--active) {\r\n-    transform: scale(0.9); /* Scale down non-active slides */\r\n+    transform: scale(0.9);  \r\n     opacity: 0.8; \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728958443833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -233,9 +233,9 @@\n \r\n \r\n \r\n .glide{\r\n-      height:fit-content;\r\n+  height:fit-content;\r\n }\r\n \r\n .glide__track{\r\n  height: fit-content;\r\n"
+                },
+                {
+                    "date": 1728958450353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 400px;\r\n+    height: fit-content;\r\n }\r\n \r\n .glide__slide{\r\n \r\n"
+                },
+                {
+                    "date": 1728958474014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: fit-content;\r\n+    height: 400px;\r\n }\r\n \r\n .glide__slide{\r\n \r\n"
+                },
+                {
+                    "date": 1728958485778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 400px;\r\n+    height: 600px;\r\n }\r\n \r\n .glide__slide{\r\n \r\n"
+                },
+                {
+                    "date": 1728958491636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 600px;\r\n+    height: 400px;\r\n }\r\n \r\n .glide__slide{\r\n \r\n"
+                },
+                {
+                    "date": 1728958628217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,9 +248,9 @@\n }\r\n \r\n .glide__slide{\r\n \r\n-    height: 100%;\r\n+    height:400px;\r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728958644479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 400px;\r\n+    height: 800px;\r\n }\r\n \r\n .glide__slide{\r\n \r\n"
+                },
+                {
+                    "date": 1728958660215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,14 +243,14 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 800px;\r\n+    height: 400px;\r\n }\r\n \r\n .glide__slide{\r\n \r\n-    height:400px;\r\n+    height: 90%;\r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728958666080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -279,9 +279,9 @@\n }\r\n \r\n .glide__slide div{\r\n     width: 100%;\r\n-    height:100%;\r\n+    height:9%;\r\n     background-size: cover;\r\n     background-position: center center;\r\n     background-repeat: no-repeat;\r\n     border-radius: 20px;\r\n"
+                },
+                {
+                    "date": 1728958810978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -279,18 +279,18 @@\n }\r\n \r\n .glide__slide div{\r\n     width: 100%;\r\n-    height:9%;\r\n+    height:95%;\r\n     background-size: cover;\r\n     background-position: center center;\r\n     background-repeat: no-repeat;\r\n     border-radius: 20px;\r\n }\r\n \r\n \r\n .glide__slide--active  {\r\n-    transform: scale(1.1);\r\n+    transform: scale(1.05);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n"
+                },
+                {
+                    "date": 1728958831545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -288,9 +288,9 @@\n }\r\n \r\n \r\n .glide__slide--active  {\r\n-    transform: scale(1.05);\r\n+    transform: scale(1);\r\n     border: 5px solid #ffffff; \r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n"
+                },
+                {
+                    "date": 1728958876540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -299,7 +299,7 @@\n     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; \r\n }\r\n \r\n .glide__slide:not(.glide__slide--active) {\r\n-    transform: scale(0.9);  \r\n+    transform: scale(0.8);  \r\n     opacity: 0.8; \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728958890281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -290,8 +290,9 @@\n \r\n .glide__slide--active  {\r\n     transform: scale(1);\r\n     border: 5px solid #ffffff; \r\n+    border-radius: ;\r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728958906128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -290,9 +290,9 @@\n \r\n .glide__slide--active  {\r\n     transform: scale(1);\r\n     border: 5px solid #ffffff; \r\n-    border-radius: ;\r\n+    border-radius: 239px;\r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728958948961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -247,11 +247,9 @@\n     height: 400px;\r\n }\r\n \r\n .glide__slide{\r\n-\r\n     height: 90%;\r\n-\r\n }\r\n \r\n \r\n \r\n@@ -290,9 +288,9 @@\n \r\n .glide__slide--active  {\r\n     transform: scale(1);\r\n     border: 5px solid #ffffff; \r\n-    border-radius: 239px;\r\n+    border-radius: 29px;\r\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); \r\n     z-index: 1; \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728958956560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,9 +243,9 @@\n }\r\n \r\n .glide__slides{\r\n     align-items: center;\r\n-    height: 400px;\r\n+    height: 500px;\r\n }\r\n \r\n .glide__slide{\r\n     height: 90%;\r\n"
+                },
+                {
+                    "date": 1728958981264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,8 +248,9 @@\n }\r\n \r\n .glide__slide{\r\n     height: 90%;\r\n+    back\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728958987062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,9 +248,9 @@\n }\r\n \r\n .glide__slide{\r\n     height: 90%;\r\n-    back\r\n+    background-size: 100% 100%;\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959047602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,9 +242,9 @@\n  align-items: center;\r\n }\r\n \r\n .glide__slides{\r\n-    align-items: center;\r\n+    align-items: end;\r\n     height: 500px;\r\n }\r\n \r\n .glide__slide{\r\n"
+                },
+                {
+                    "date": 1728959064269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,10 @@\n }\r\n \r\n .glide__track{\r\n  height: fit-content;\r\n- align-items: center;\r\n+ align-items: end;\r\n+\r\n }\r\n \r\n .glide__slides{\r\n     align-items: end;\r\n"
+                },
+                {
+                    "date": 1728959096971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,9 +248,9 @@\n     height: 500px;\r\n }\r\n \r\n .glide__slide{\r\n-    height: 90%;\r\n+    height: 100%;\r\n     background-size: 100% 100%;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959132835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,9 +248,9 @@\n     height: 500px;\r\n }\r\n \r\n .glide__slide{\r\n-    height: 100%;\r\n+    height: 0%;\r\n     background-size: 100% 100%;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959138976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,10 +248,9 @@\n     height: 500px;\r\n }\r\n \r\n .glide__slide{\r\n-    height: 0%;\r\n-    background-size: 100% 100%;\r\n+    height: 100%;\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959144231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -278,9 +278,9 @@\n }\r\n \r\n .glide__slide div{\r\n     width: 100%;\r\n-    height:95%;\r\n+    height:90%;\r\n     background-size: cover;\r\n     background-position: center center;\r\n     background-repeat: no-repeat;\r\n     border-radius: 20px;\r\n"
+                },
+                {
+                    "date": 1728959218965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,8 +104,10 @@\n     color: #fff;\r\n     line-height: normal;\r\n }\r\n \r\n+\r\n+\r\n .main-container .left p{\r\n     color: #fff;\r\n     font-family: \"Cormorant Garamond\" sans-serif;\r\n     font-size: 16px;\r\n@@ -278,9 +280,9 @@\n }\r\n \r\n .glide__slide div{\r\n     width: 100%;\r\n-    height:90%;\r\n+    height:100%;\r\n     background-size: cover;\r\n     background-position: center center;\r\n     background-repeat: no-repeat;\r\n     border-radius: 20px;\r\n"
+                },
+                {
+                    "date": 1728959227601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,8 +102,9 @@\n     font-style: normal;\r\n     font-size: 80px;\r\n     color: #fff;\r\n     line-height: normal;\r\n+    anim\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959233295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n     font-style: normal;\r\n     font-size: 80px;\r\n     color: #fff;\r\n     line-height: normal;\r\n-    anim\r\n+    animation-name: header-;\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959240712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,13 +102,17 @@\n     font-style: normal;\r\n     font-size: 80px;\r\n     color: #fff;\r\n     line-height: normal;\r\n-    animation-name: header-;\r\n+    animation-name: header-animation;\r\n }\r\n \r\n+@keyframes identifier {\r\n+    \r\n+}\r\n \r\n \r\n+\r\n .main-container .left p{\r\n     color: #fff;\r\n     font-family: \"Cormorant Garamond\" sans-serif;\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1728959247665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,10 @@\n     line-height: normal;\r\n     animation-name: header-animation;\r\n }\r\n \r\n-@keyframes identifier {\r\n+@keyframes header-animation {\r\n+\r\n     \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1728959256227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n     font-style: normal;\r\n     font-size: 80px;\r\n     color: #fff;\r\n     line-height: normal;\r\n-    animation-name: header-animation;\\\r\n+    animation-name: header-animation;\r\n }\r\n \r\n @keyframes header-animation {\r\n \r\n"
                 }
             ],
             "date": 1728867891919,

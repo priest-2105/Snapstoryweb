@@ -94,6 +94,7 @@ body {
     padding-left: 50px;
     height: 70%;
     align-items: center;
+    overflow: hidden;
 }
 
 .main-container .left h1{
@@ -103,7 +104,21 @@ body {
     font-size: 80px;
     color: #fff;
     line-height: normal;
+    animation-name: header-animation;
+    animation-duration: 0.5s;
 }
+
+@keyframes header-animation {
+
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
 
 .main-container .left p{
     color: #fff;
@@ -234,23 +249,22 @@ footer p{
 
 
 .glide{
-      height:fit-content;
+  height:fit-content;
 }
 
 .glide__track{
  height: fit-content;
- align-items: center;
+ align-items: end;
+
 }
 
 .glide__slides{
-    align-items: center;
-    height: 400px;
+    align-items: end;
+    height: 500px;
 }
 
 .glide__slide{
-
     height: 100%;
-
 }
 
 
@@ -289,17 +303,18 @@ footer p{
 
 
 .glide__slide--active  {
-    transform: scale(1.1);
+    transform: scale(1);
     border: 5px solid #ffffff; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
+    border-radius: 29px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     z-index: 1; 
 }
 
 .glide__slide {
-    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for scaling and border */
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; 
 }
 
 .glide__slide:not(.glide__slide--active) {
-    transform: scale(0.9); /* Scale down non-active slides */
+    transform: scale(0.8);  
     opacity: 0.8; 
 }

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "super.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1728958735054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1728958735054,
+            "name": "Commit-0",
+            "content": "const hamburgerToggle_div = document.getElementById('hamburgerToggle');\r\nconst navList_Div = document.getElementById('navList')\r\nconst closeMenu_B = document.getElementById('closeMenu');\r\nconst galleryItem_Div = document.getElementById('galleryItem');\r\nconst galleryItemContainer_Div = document.getElementById('galleryItemContainer');\r\n\r\n\r\ncloseMenu_B.addEventListener('click', () => {\r\n\r\n    navList_Div.classList.toggle('show');\r\n    \r\n});\r\n\r\nhamburgerToggle_div.addEventListener('click', () => {\r\n\r\n    navList_Div.classList.toggle('show');\r\n    \r\n});\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', function () {\r\n    const glide = new Glide('.glide', {\r\n        type: 'carousel',\r\n        startAt: 0,\r\n        perView: 2.3,\r\n        focusAt: '0',\r\n        gap: 20,\r\n        peek: {\r\n            before: 40,\r\n            after: 0\r\n          }\r\n    });\r\n\r\n    glide.mount();\r\n\r\n    // Function to update the background, button color, header, and description\r\n    function updateSlideContent() {\r\n        const currentSlide = document.querySelector('.glide__slide--active');\r\n\r\n        if (currentSlide) {\r\n            const backgroundImage = currentSlide.getAttribute('data-bg');\r\n            const buttonColor = currentSlide.getAttribute('data-button-color');\r\n            const headerText = currentSlide.getAttribute('data-header');\r\n            const descriptionText = currentSlide.getAttribute('data-description');\r\n\r\n            document.querySelector('.body').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.904)), ${backgroundImage}`;\r\n            document.getElementById('exploreButton').style.backgroundColor = buttonColor;\r\n            document.getElementById('headerText').innerText = headerText;\r\n            document.getElementById('descriptionText').innerText = descriptionText;\r\n        }\r\n    }\r\n\r\n    // Update content when the glide index changes\r\n    glide.on('run.after', function () {\r\n        updateSlideContent();\r\n    });\r\n\r\n    // Initial activation of the first slide\r\n    updateSlideContent();\r\n});\r\n\r\n"
+        }
+    ]
+}

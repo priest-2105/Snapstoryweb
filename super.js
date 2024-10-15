@@ -31,7 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
         peek: {
             before: 40,
             after: 0
-          }
+          },
+          breakpoints: {
+            1024: {
+                perView: 2 
+            },
+            768: {
+                perView: 1.5 
+            },
+            480: {
+                perView: 1 
+            }
+        }
     });
 
     glide.mount();

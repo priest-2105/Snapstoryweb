@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 38,
             "patches": [
                 {
                     "date": 1728867891919,
@@ -156,6 +156,10 @@
                 {
                     "date": 1728959256227,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n     font-style: normal;\r\n     font-size: 80px;\r\n     color: #fff;\r\n     line-height: normal;\r\n-    animation-name: header-animation;\\\r\n+    animation-name: header-animation;\r\n }\r\n \r\n @keyframes header-animation {\r\n \r\n"
+                },
+                {
+                    "date": 1728960759234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -264,9 +264,9 @@\n     \r\n     .main-container .left button{  \r\n         font-size: 20px;\r\n         font-weight: 600;\r\n-        padding: 17px 34px;\r\n+        padding: 17px 4px;\r\n     }\r\n     \r\n     .main-container .left button:hover{  \r\n         transition: all 0.5s ease;\r\n"
                 }
             ],
             "date": 1728867891919,

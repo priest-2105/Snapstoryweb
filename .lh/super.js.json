@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1728958735054,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728960894527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n         gap: 20,\r\n         peek: {\r\n             before: 40,\r\n             after: 0\r\n-          }\r\n+          },\r\n+    \r\n     });\r\n \r\n     glide.mount();\r\n \r\n"
+                },
+                {
+                    "date": 1728960902645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,22 @@\n         peek: {\r\n             before: 40,\r\n             after: 0\r\n           },\r\n-    \r\n+          breakpoints: {\r\n+            // When the screen is 1024px or less\r\n+            1024: {\r\n+                perView: 2 // Show 2 slides\r\n+            },\r\n+            // When the screen is 768px or less\r\n+            768: {\r\n+                perView: 1.5 // Show 1.5 slides\r\n+            },\r\n+        \r\n+            480: {\r\n+                perView: 1 // Show 1 slide\r\n+            }\r\n+        }\r\n     });\r\n \r\n     glide.mount();\r\n \r\n"
+                },
+                {
+                    "date": 1728960909710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,17 +32,14 @@\n             before: 40,\r\n             after: 0\r\n           },\r\n           breakpoints: {\r\n-            // When the screen is 1024px or less\r\n             1024: {\r\n-                perView: 2 // Show 2 slides\r\n+                perView: 2 \r\n             },\r\n-            // When the screen is 768px or less\r\n             768: {\r\n                 perView: 1.5 // Show 1.5 slides\r\n             },\r\n-        \r\n             480: {\r\n                 perView: 1 // Show 1 slide\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1728960916363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,12 +36,12 @@\n             1024: {\r\n                 perView: 2 \r\n             },\r\n             768: {\r\n-                perView: 1.5 // Show 1.5 slides\r\n+                perView: 1.5 \r\n             },\r\n             480: {\r\n-                perView: 1 // Show 1 slide\r\n+                perView: 1 \r\n             }\r\n         }\r\n     });\r\n \r\n"
                 }
             ],
             "date": 1728958735054,

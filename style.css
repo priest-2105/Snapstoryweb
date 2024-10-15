@@ -6,6 +6,25 @@
     src: url(./assets/KnightWarrior-w16n8.otf);
 }
 
+.bi{
+    color: #fff;
+    font-size: 20px;
+}
+.bi-list{
+    color: #fff;
+    font-size:30px;
+    margin-bottom: -80px;
+}
+
+.hamburger{
+    margin-bottom: -10px;
+}
+
+#closeMenu{
+    background-color: transparent;
+    border: none;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -170,6 +189,19 @@ footer p{
 
 @media only screen and (max-width: 991px) {
 
+    
+    body {
+        overflow-y:scroll; 
+        overflow-x:hidden; 
+    }
+
+    .body {
+        height: 100%;
+        width: 100%;
+        overflow-x:hidden; 
+        overflow-y:scroll;
+    }
+
     .navbar {
         justify-content: space-between;
         padding: 20px 3rem; 
@@ -199,6 +231,7 @@ footer p{
         transform: translateX(0px);
         transition: all 0.5s ease-in-out;
         /* display: block; */
+        z-index: 999;
     }
     #closeMenu{
         margin: 20px;
@@ -228,8 +261,103 @@ footer p{
         cursor: pointer;
     }
 
+    .main-container{
+        height: 100%;
+        display: block;
+    }
+
+    .main-container .left{
+        width:90%; 
+        padding-left: 50px;
+        height: fit-content;
+        padding-bottom: 50px;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .main-container .left h1{
+        font-family: "Cormorant Garamond", system-ui;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 70px;
+        color: #fff;
+        line-height: normal;
+        animation-name: header-animation;
+        animation-duration: 0.5s;
+    }
+    
+    
+    .main-container .left p{
+        color: #fff;
+        font-family: "Cormorant Garamond" sans-serif;
+        font-size: 16px;
+        height: 70px;
+        font-weight: 400;
+    }
+    
+    .main-container .left button{  
+        font-size: 20px;
+        font-weight: 600;
+        padding: 14px 24px;
+    }
+        
+    .main-container .right{
+        width: 100%; 
+    }
+    
+    
    
 }
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+ 
+    .main-container .left{
+        width:90%; 
+        padding-left: 20px;
+        height: fit-content;
+        padding-bottom: 50px;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .main-container .left h1{
+        font-family: "Cormorant Garamond", system-ui;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 70px;
+        color: #fff;
+        line-height: normal;
+        animation-name: header-animation;
+        animation-duration: 0.5s;
+    }
+    
+    
+    .main-container .left p{
+        color: #fff;
+        font-family: "Cormorant Garamond" sans-serif;
+        font-size: 16px;
+        height: fit-content;
+        font-weight: 400;
+    }
+    
+    .main-container .left button{  
+        font-size: 20px;
+        font-weight: 600;
+        padding: 14px 24px;
+    }
+        
+    .main-container .right{
+        width: 100%; 
+    }
+    
+   
+}
+
 
 
 .hamburger {
